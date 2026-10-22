@@ -1,0 +1,16 @@
+{# Shared site footer. Set `footer_tagline` (Markdown) before including to
+   override the default line. #}
+{% set tagline = footer_tagline | default(value="We are judged by what we stand for. **Your membership is critical.**") %}
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand-lockup brand-lockup--footer">
+      <img src="{{ get_url(path='utaw-logo-white.png') }}" alt="UTAW — United Tech &amp; Allied Workers" class="footer-logo">
+      <span class="brand-affiliation" aria-label="at DeepMind">
+        <span class="at" aria-hidden="true">@</span><span class="name">DeepMind</span>
+      </span>
+    </div>
+    <p class="footer-tagline">{{ tagline | markdown(inline=true) | safe }}</p>
+    <a href="{{ config.extra.join_url }}" class="btn-cta" rel="noopener noreferrer">Join UTAW</a>
+  </div>
+</footer>

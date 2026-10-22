@@ -1,0 +1,34 @@
+# The three demand pillars shown in the "Our Demands" section.
+# These distil the full campaign demands (hosted on UTAW) into the three
+# priorities the campaign organises around. Add or reorder by editing the
+# [[demand]] blocks. `text` supports Markdown.
+
+[[demand]]
+label = "Enforceable Red Lines"
+text = """
+Google must publicly define and firmly uphold red lines around impermissible
+applications of its AI systems, and always be true to its commitment to human rights
+and international law. These red lines are only meaningful if backed by enforceable
+safeguards and persistent monitoring. Where safe deployment cannot be guaranteed,
+Google should decline to pursue the contract.
+"""
+
+[[demand]]
+label = "Transparency & the Right to Abstain"
+text = """
+Public trust and effective oversight of AI depend on transparency, especially for
+high-risk applications. Google should disclose the permitted use-terms governing
+deployment, the safeguards in place, and the human rights due diligence conducted
+beforehand. Workers must have the right to decline work on military or surveillance
+projects, without fear of retaliation.
+"""
+
+[[demand]]
+label = "Climate"
+text = """
+The defining challenge of our era is mitigating human impact on the climate, and AI's
+growth must not come at the planet's expense. We want data centres
+powered by 100% additional, locally-sourced renewable energy on a 24/7 basis, an end to
+custom AI solutions that help oil and gas companies identify new reserves or accelerate
+drilling, and a published plan for meeting its climate commitments.
+"""

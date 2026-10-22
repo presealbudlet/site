@@ -1,0 +1,133 @@
+# FAQ entries shown in the FAQ section.
+# Add one by copying a [[faq]] block. Answers support Markdown.
+
+[[faq]]
+question = "Can I stay anonymous?"
+answer = """
+Yes.
+
+Your employer does not have a legal right to know if you are a member of a trade union. Unions keep
+their membership lists strictly confidential. Under Data Protection (UK GDPR), trade union membership
+is classified as "special category data," meaning it requires the highest level of privacy protection.
+
+If the union pursues statutory recognition through the UK Government's Central Arbitration Committee
+(CAC), the CAC will need to verify the union has sufficient membership within the bargaining unit —
+typically at least 10% of workers. To do this, membership data may need to be submitted to the CAC,
+which is an independent governmental body.
+
+Critically, this data is not shared with Google. The CAC handles it confidentially, and the employer
+only sees the membership percentage.
+
+The law forbids employers from compiling lists of union members — see Blacklisting Regulations 2010,
+Reg. 3.
+"""
+
+[[faq]]
+question = "Who can join?"
+answer = """
+Membership is open to UK-based employees of Google DeepMind. Unfortunately
+contractors and colleagues based outside the UK (for example in the US) aren't
+eligible for this recognition campaign — but US colleagues can organise with our
+sister union, the [Alphabet Workers Union (AWU)](https://www.alphabetworkersunion.org/).
+"""
+
+[[faq]]
+question = "How much does it cost, and what do I get?"
+answer = """
+Membership is **£8.70 a month**. This covers the cost of running the union —
+trained organisers, legal advice, and support when you need it.
+
+In return you get:
+
+- A **vote** in shaping the union's demands — the agenda is set democratically by members, not a handful of reps.
+- Access to our **free legal helpline and advice from day one**.
+- **Individual representation** in disciplinary and grievance hearings (for issues arising after your first eight weeks of membership).
+- A range of everyday **member discounts** — shopping, travel, insurance, gym memberships and more.
+
+The strongest reason, though, is collective: every member makes our case for
+recognition stronger and the union harder to ignore.
+"""
+
+[[faq]]
+question = "What legal protection are we entitled to?"
+answer = """
+- **Protection from dismissal for union activity** — Section 152 TULRCA 1992
+- **Protection from detriment** (demotion, pay cut, harassment) for union activity — Section 146 TULRCA 1992
+- **Protection from dismissal for taking part in lawful industrial action** (now automatically unfair, no qualifying period) — Section 238A TULRCA, as amended by Employment Rights Act 2025
+- **Protection from detriment for industrial action** (coming into force October 2026) — Employment Rights Act 2025, s.76 (which inserts s.236A into TULRCA 1992)
+- **Right to paid time off for union reps** to carry out duties — Section 168 TULRCA 1992
+- **Right to unpaid time off for all members** to take part in union activities — Section 170 TULRCA 1992
+- **Individual representation** in disciplinary and grievance hearings — Employment Relations Act 1999, s.10
+- **Legal support through the union** if things go wrong — Union rulebook / membership agreement
+- **Democratic voice** in setting demands and balloting on action — Section 226 TULRCA 1992 (ballot provisions)
+- **Protection from blacklisting** based on union activities — Blacklisting Regulations 2010
+"""
+
+[[faq]]
+question = "Why doesn't Google want us to form a union?"
+answer = """
+Together we can formally act as an employee-side counterweight to management's ability to exercise
+unchecked authority. Management's self-interest is to prevent us from having this kind of power.
+"""
+
+[[faq]]
+question = "What does statutory recognition mean for union members?"
+answer = """
+Statutory recognition gives GDM employees a legal framework to force negotiations on topics we care
+about if Google refuses to recognise us voluntarily. By securing recognition, we gain formal rights
+to collective bargaining, disclosure of internal company information, and mandatory negotiation and
+consultation on major workplace changes.
+
+For statutory recognition there is a minimum membership threshold (10% of the bargaining unit, which
+we have passed) and all employees in the unit are called to vote. Even if you are not a union member,
+you can still vote — your vote will be fully anonymous. A majority vote in favour is sufficient;
+there is no minimum turnout threshold.
+"""
+
+[[faq]]
+question = "How can we extend the collective agreement beyond pay / hours / holidays?"
+answer = """
+There is no restriction on topics we can discuss in collective bargaining — including business
+practices, company priorities and governance. Pay, hours and holidays is the minimum legal scope,
+but this isn't the focus of our campaign.
+
+To broaden the scope we need to pressure Google using our industrial leverage: unions can use
+actions short of a strike, campaigns, and ultimately strikes if the employer refuses.
+**The stronger the union, the more effective the pressure.** Most often, a credible threat is all
+it takes. Getting recognition is just the first step — then we work on extending the agreement.
+"""
+
+[[faq]]
+question = "I don't want to be affected by decisions made by union members — what can I do?"
+answer = """
+Decisions that affect you are already made by a much smaller pool of management executives,
+with no visibility or meaningful input from you: you were not consulted on the removal of the
+autonomous weapons or mass surveillance pledges from the AI Principles, nor on safety risks from
+contracts with significant human rights implications.
+
+Collective decision-making adds democracy, doesn't remove it. We will have a way to demand changes,
+and the company will have to consult us before making major decisions. Surveys can be run among
+all employees to better understand concerns. You will never be forced to engage or join a union.
+"""
+
+[[faq]]
+question = "Have you tried going through the UK Googler Forums?"
+answer = """
+We have tried to open dialogue through the UK Googler Forums, but leadership declined to discuss
+ethical matters through this forum. Other routes — petitions with broad support, letters, questions
+at townhalls — have also been tried and ignored.
+"""
+
+[[faq]]
+question = "What is \"union busting\"?"
+answer = """
+Let's ask Gemini!
+
+![Gemini's response to "what is union busting?", listing common union-busting tactics](/gemini-unionbusting.png)
+
+The best way to counteract union busting:
+
+- **Resist intimidation** by knowing your rights and UK law. Union activity is well protected in the UK.
+- **Diversify your sources** — listen to different narratives and build your own informed opinion. Assume leadership have a bias in their comms about unions.
+- **Talk with your colleagues** — learn about their experience and motivations directly from them.
+"""

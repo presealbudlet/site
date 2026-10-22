@@ -1,0 +1,14 @@
+base_url = "https://www.gdmunion.co.uk"
+title = "UTAW at DeepMind"
+description = "FTEs across Google DeepMind UK are unionising for a real say over AI safety, unethical military contracts, and AI's climate impact. Join us."
+default_language = "en"
+minify_html = true
+generate_feeds = false
+# No sitemap: the site carries noindex on every page and we do not want it
+# listed in search results, so there is nothing to advertise to crawlers.
+generate_sitemap = false
+
+[extra]
+# Shared across templates (nav, footer). Kept here so there is a single source
+# of truth rather than repeating the value in each page's front matter.
+join_url = "https://utaw.tech/join"

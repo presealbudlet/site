@@ -818,11 +818,19 @@ body {
   max-width: 42ch;
 }
 
+/* Stacks the archive link and the external partnerships-portal link */
+.why-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
 .why-archive {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  margin-top: 1.5rem;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
@@ -1423,12 +1431,15 @@ body.page-archive {
 .archive-table tbody tr { transition: background 0.14s ease; }
 
 /* Theme spine — the map's lane colours, filed down the left edge of each row. */
-.archive-table tbody tr[data-theme="policy"]   { --row: #2a78d6; }
 .archive-table tbody tr[data-theme="military"] { --row: #eda100; }
+.archive-table tbody tr[data-theme="contractors"] { --row: #8c564b; }
 .archive-table tbody tr[data-theme="israel"]   { --row: #e34948; }
 .archive-table tbody tr[data-theme="ice"]      { --row: #4a3aa7; }
 .archive-table tbody tr[data-theme="climate"]  { --row: #008300; }
 .archive-table tbody tr[data-theme="workers"]  { --row: #1baf7a; }
+.archive-table tbody tr[data-theme="deals"]    { --row: #2a78d6; }
+/* The AI-principles change is the map's marker line, not a lane — same red. */
+.archive-table tbody tr[data-theme="pledge"]   { --row: #e34948; }
 .archive-table tbody td.archive-date {
   box-shadow: inset 3px 0 0 var(--row, transparent);
 }

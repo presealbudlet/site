@@ -10,6 +10,56 @@
 #   source  — publication / domain shown in its own column
 #   summary — short digest shown in the "AI Summary" column, foregrounding
 #             Google's role. Edit freely.
+#   theme   — timeline lane: military, contractors (Palantir, Lockheed Martin,
+#             etc.), israel, ice, climate, workers, deals
+#             ("Other Controversial Deals"). Use "pledge" only for the AI
+#             principles change, which is drawn as the marker line instead.
+#   sev     — 1–9, sets the dot size on the timeline
+
+[[article]]
+date = "October 22, 2026"
+title = "‘Pure arrogance’: anger in Finland as Google illegally fells 250,000 trees for datacentre"
+url = "https://www.theguardian.com/environment/ng-interactive/2026/oct/22/finland-google-felling-trees-datacentre"
+source = "theguardian.com"
+summary = "Contractors acting for Google cleared roughly 500 hectares of Finnish forest at Muhos and Kajaani, about 250,000 trees, for datacentres in its €13bn Finland expansion before environmental assessments were complete, prompting Finland's environmental regulator to order all preparatory work halted."
+theme = "climate"
+sev = 5
+
+[[article]]
+date = "October 21, 2026"
+title = "Google staff resign in backlash over its AI contracts with military"
+url = "https://www.bbc.co.uk/news/articles/cmreyvepnv0po"
+source = "bbc.co.uk"
+summary = "Google staff, including at Google DeepMind, have resigned in protest at the company's AI contracts with the military."
+theme = "workers"
+sev = 5
+
+[[article]]
+date = "October 21, 2026"
+title = "Google DeepMind Engineer Resigns in Protest of Pentagon Contract"
+url = "https://theintercept.com/2026/10/21/google-deepmind-resign-ai-military-gaza/"
+source = "theintercept.com"
+summary = "A Google DeepMind research engineer resigned in protest of the company's military work for the US and Israel, including Project Nimbus and the classified Pentagon AI contract announced in April, saying Google is helping build AI that makes war more brutal and that her internal posts about genocide were deleted."
+theme = "workers"
+sev = 5
+
+[[article]]
+date = "October 20, 2026"
+title = "Stay Human."
+url = "https://stay-human.sofialiguori.com/"
+source = "stay-human.sofialiguori.com"
+summary = "A departing Google DeepMind employee's farewell letter, written on their last day, criticises Google's military and surveillance contracts, including its classified deal with the US Department of War and its role in the war on Gaza, and urges tech workers to resist unethical uses of AI and join worker organisations."
+theme = "workers"
+sev = 5
+
+[[article]]
+date = "September 23, 2026"
+title = "A New Federal Procurement Playbook: Google Public Sector Joins DHS's Cumulus Cloud"
+url = "https://fedtechmagazine.com/article/2026/09/new-federal-procurement-playbook-google-public-sector-joins-dhss-cumulus-cloud"
+source = "fedtechmagazine.com"
+summary = "The Department of Homeland Security, ICE's parent department, awarded Google Public Sector a potential $875.6M single-award contract under Cumulus, the first time DHS has bought cloud services centrally for all its agencies rather than agency by agency. It is the third Cumulus award, after AWS (potential $2.6B, June) and Oracle ($568M, August)."
+theme = "ice"
+sev = 5
 
 [[article]]
 date = "July 20, 2026"
@@ -44,7 +94,7 @@ title = "Trust is not Governance"
 url = "https://www.blackhc.net/essays/trust_is_not_governance/"
 source = "blackhc.net"
 summary = "UTAW member Andreas Kirsch argues DeepMind's safety culture cannot substitute for real governance, citing Google's Pentagon contract as proof that trust in leadership fails when commercial and national-security pressure intervenes."
-theme = "policy"
+theme = "workers"
 sev = 2
 
 [[article]]
@@ -53,8 +103,17 @@ title = "Google Director Resigns, Citing Pentagon AI Deal"
 url = "https://www.businessinsider.com/google-director-resigned-pentagon-ai-deal-military-artificial-intelligence-gemini-2026-6"
 source = "businessinsider.com"
 summary = "Google Android security director René Mayrhofer resigned, writing that management 'lost its moral compass' after signing Pentagon AI contracts he says could enable mass surveillance of EU citizens and violate international law."
-theme = "military"
+theme = "workers"
 sev = 7
+
+[[article]]
+date = "June 4, 2026"
+title = "Palantir Announces Availability on Google Cloud Marketplace, Including Two-Way Integrations between BigQuery and Foundry and Deep Connectivity between Gemini and AIP"
+url = "https://www.businesswire.com/news/home/20260604907574/en/Palantir-Announces-Availability-on-Google-Cloud-Marketplace-Including-Two-Way-Integrations-between-BigQuery-and-Foundry-and-Deep-Connectivity-between-Gemini-and-AIP"
+source = "businesswire.com"
+summary = "Palantir's platforms became available on Google Cloud Marketplace, with two-way integrations between Google's BigQuery and Palantir Foundry and deep connectivity between Google's Gemini models and Palantir's AI Platform (AIP)."
+theme = "contractors"
+sev = 5
 
 [[article]]
 date = "May 22, 2026"
@@ -206,7 +265,7 @@ title = "Google's $32 billion deal for Wiz clears DOJ antitrust review, Wiz CEO 
 url = "https://www.reuters.com/business/googles-32-billion-deal-wiz-clears-doj-antitrust-review-wiz-ceo-tells-wsj-2025-11-05/"
 source = "reuters.com"
 summary = "Google's $32 billion acquisition of Israeli cloud-security firm Wiz cleared US Department of Justice antitrust review, opening the way for its largest-ever takeover."
-theme = "policy"
+theme = "deals"
 sev = 1
 
 [[article]]
@@ -323,7 +382,7 @@ title = "Google Cloud Coming Soon to Palantir FedStart | Announcement"
 url = "https://web.archive.org/web/20250423153054/https://cloud.google.com/blog/topics/public-sector/google-public-sector-and-palantir-collaborate-to-bring-google-cloud-to-fedstart/"
 source = "cloud.google.com"
 summary = "Google announced that Google Cloud is coming to Palantir's FedStart, letting software vendors and government agencies run compliant, authorised cloud services on Google infrastructure through Palantir."
-theme = "military"
+theme = "contractors"
 sev = 5
 
 [[article]]
@@ -332,7 +391,7 @@ title = "UAE launches Cybersecurity Centre of Excellence in collaboration with G
 url = "https://web.archive.org/web/20250409182845/https://gulfnews.com/uae/science/uae-launches-cybersecurity-center-of-excellence-in-collaboration-with-google-cloud-1.500088390"
 source = "gulfnews.com"
 summary = "Google Cloud partnered with the UAE to launch its first Cybersecurity Centre of Excellence in Abu Dhabi, backed by the UAE Cabinet as part of the country's digital-transformation drive."
-theme = "policy"
+theme = "deals"
 sev = 3
 
 [[article]]
@@ -350,7 +409,7 @@ title = "Lockheed Martin and Google Cloud Announce Collaboration to Advance Gene
 url = "https://web.archive.org/web/20250402182301/https://www.googlecloudpresscorner.com/2025-03-27-Lockheed-Martin-and-Google-Cloud-Announce-Collaboration-to-Advance-Generative-AI-For-National-Security,1"
 source = "googlecloudpresscorner.com"
 summary = "Google Cloud announced a collaboration with weapons-maker Lockheed Martin to integrate its generative AI into Lockheed's 'AI Factory', aimed at advancing AI for national-security and defence decision-making."
-theme = "military"
+theme = "contractors"
 sev = 7
 
 [[article]]
@@ -359,7 +418,7 @@ title = "Google announces agreement to acquire Wiz"
 url = "https://web.archive.org/web/20250319023126/https://blog.google/inside-google/company-announcements/google-agreement-acquire-wiz/"
 source = "blog.google"
 summary = "Google announced a definitive agreement to acquire Israeli cloud-security firm Wiz for $32 billion in an all-cash deal, its largest-ever acquisition, with Wiz set to join Google Cloud."
-theme = "policy"
+theme = "deals"
 sev = 2
 
 [[article]]
@@ -377,7 +436,7 @@ title = "Google Lifts a Ban on Using Its AI for Weapons and Surveillance | WIRED
 url = "https://web.archive.org/web/20250205002852/https://www.wired.com/story/google-responsible-ai-principles/"
 source = "wired.com"
 summary = "Google removed language from its AI principles that had pledged not to build technology for weapons or surveillance, lifting its 2018 self-imposed ban weeks into Trump's second term."
-theme = "policy"
+theme = "pledge"
 sev = 9
 
 [[article]]
@@ -541,6 +600,15 @@ source = "theintercept.com"
 summary = "Leaked documents revealed the advanced AI tools, including facial detection and sentiment analysis, that Google is selling to Israel under Project Nimbus, capabilities many employees say they were kept unaware of."
 theme = "israel"
 sev = 8
+
+[[article]]
+date = "June 16, 2022"
+title = "Palantir and Google Cloud partner to power data-driven transformations in commercial industries"
+url = "https://cloud.google.com/blog/topics/partners/google-cloud-and-palantir-announce-annalytics-partnership"
+source = "cloud.google.com"
+summary = "Google Cloud and Palantir announced a multi-year partnership, making Palantir's Foundry platform available on Google Cloud and Google Cloud Marketplace with integrations into BigQuery, aimed at commercial industries such as retail, financial services and supply chain."
+theme = "contractors"
+sev = 3
 
 [[article]]
 date = "May 18, 2022"

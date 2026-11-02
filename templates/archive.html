@@ -17,7 +17,7 @@
   <style>
   /* ── Archive map: theme-swimlane timeline above the table ───────── */
   .archive-map{
-    --am-policy:#2a78d6; --am-military:#eda100; --am-israel:#e34948;
+    --am-deals:#2a78d6; --am-military:#eda100; --am-contractors:#8c564b; --am-israel:#e34948;
     --am-ice:#4a3aa7; --am-workers:#1baf7a; --am-marker:#e34948;
     --am-panel:#f5f7fc; --am-stroke:rgba(1,21,72,.30);
     margin:0 0 2.75rem; padding:clamp(1rem,2.5vw,1.5rem);
@@ -74,6 +74,9 @@
   .am-mk{stroke:var(--am-marker);stroke-width:1.6;stroke-dasharray:3 4;opacity:.85;}
   .am-mk-lbl{fill:var(--am-marker);font:700 10.5px 'Barlow',sans-serif;}
   .am-mk-dot{fill:var(--am-marker);}
+  .am-mk-link{cursor:pointer;}
+  .am-mk-link:hover .am-mk-lbl{text-decoration:underline;}
+  .am-mk-link:focus-visible{outline:2px solid var(--cyan);}
   .am-tip{position:absolute;top:0;left:0;z-index:20;pointer-events:none;max-width:280px;background:var(--navy);
     color:#fff;border-radius:10px;padding:.6rem .7rem;box-shadow:0 12px 30px -8px rgba(1,21,72,.5);
     opacity:0;transform:translateY(4px);transition:opacity .12s ease;font-size:.84rem;}
@@ -111,7 +114,7 @@
           </div>
           <div class="am-scroll-wrap">
             <div class="am-scroll">
-              <svg class="am-svg" role="img" aria-label="Timeline of the archived articles, grouped into five theme lanes from 2020 to 2026. The full data is in the table below."></svg>
+              <svg class="am-svg" role="img" aria-label="Timeline of the archived articles, grouped into seven theme lanes from 2020 to 2026. The full data is in the table below."></svg>
               <div class="am-tip" aria-hidden="true"></div>
             </div>
             <span class="am-fade am-fade-l" aria-hidden="true"></span>
@@ -143,7 +146,7 @@
             </thead>
             <tbody>
               {% for a in articles.article %}
-              <tr data-theme="{{ a.theme | default(value='policy') }}" data-sev="{{ a.sev | default(value=5) }}">
+              <tr data-theme="{{ a.theme | default(value='deals') }}" data-sev="{{ a.sev | default(value=5) }}">
                 <td class="archive-date">{{ a.date }}</td>
                 <th scope="row" class="archive-title">
                   {% if a.url %}
@@ -174,22 +177,23 @@
     if (!fig || !svg || !rows.length) return;
 
     var THEMES = [
-      {k:'policy',   name:'AI Principles & Policy', c:'#2a78d6'},
       {k:'military', name:'US Military & Pentagon', c:'#eda100'},
+      {k:'contractors', name:'Defence Contractors', c:'#8c564b'},
       {k:'israel',   name:'Israel & Gaza',          c:'#e34948'},
       {k:'ice',      name:'ICE & Border',           c:'#4a3aa7'},
       {k:'climate',  name:'Climate & Datacentres',  c:'#008300'},
-      {k:'workers',  name:'Workers & Dissent',      c:'#1baf7a'}
+      {k:'workers',  name:'Workers & Dissent',      c:'#1baf7a'},
+      {k:'deals',    name:'Other Controversial Deals', c:'#2a78d6'}
     ];
     var CMAP = {}; THEMES.forEach(function(t){ CMAP[t.k] = t.c; });
 
-    var DATA = rows.map(function(tr, i){
+    var ALL = rows.map(function(tr, i){
       var link = tr.querySelector('.archive-title a');
       var titleEl = link || tr.querySelector('.archive-title');
       var srcEl = tr.querySelector('.archive-source');
       return {
         i: i, row: tr,
-        theme: tr.getAttribute('data-theme') || 'policy',
+        theme: tr.getAttribute('data-theme') || 'deals',
         sev: +(tr.getAttribute('data-sev') || 5),
         date: tr.querySelector('.archive-date').textContent.trim(),
         title: (titleEl ? titleEl.textContent : '').replace(/\s*↗\s*$/, '').trim(),
@@ -197,22 +201,26 @@
         source: srcEl ? srcEl.textContent.trim() : ''
       };
     });
-    DATA.forEach(function(d){ d.t = +new Date(d.date); });
+    ALL.forEach(function(d){ d.t = +new Date(d.date); });
+    // The AI-principles change (theme "pledge") is drawn as the marker line
+    // across every lane rather than as a dot; everything else gets a dot.
+    var PLEDGE_ROW = ALL.filter(function(d){ return d.theme === 'pledge'; })[0];
+    var DATA = ALL.filter(function(d){ return CMAP[d.theme]; });
 
     var NS = 'http://www.w3.org/2000/svg';
     function el(n, a){ var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
     var sevR = function(s){ return 3 + (s - 1) * 0.72; };            // sev 1..9 -> r 3..8.8
     var laneH = 60;
 
-    var W = 960, L = 156, R = 24, yTop = 42;
+    var W = 960, L = 176, R = 24, yTop = 42;
     var H = yTop + THEMES.length * laneH + 16;
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
 
-    var times = DATA.map(function(d){ return d.t; });
+    var times = ALL.map(function(d){ return d.t; });
     var pad = 95 * 864e5;
     var t0 = Math.min.apply(null, times) - pad, t1 = Math.max.apply(null, times) + pad;
     var x = function(t){ return L + (t - t0) / (t1 - t0) * (W - L - R); };
-    var PLEDGE = +new Date('2025-02-04');
+    var PLEDGE = PLEDGE_ROW ? PLEDGE_ROW.t : +new Date('2025-02-04');
 
     var gGrid = el('g'), gLanes = el('g'), gMark = el('g'), gDots = el('g');
     svg.appendChild(gGrid); svg.appendChild(gLanes); svg.appendChild(gMark); svg.appendChild(gDots);
@@ -242,6 +250,15 @@
     gMark.appendChild(el('circle', {cx:mx, cy:mTop, r:3, 'class':'am-mk-dot'}));
     var ml = el('text', {x:mx - 6, y:mTop - 22, 'text-anchor':'end', 'class':'am-mk-lbl'});
     ml.textContent = 'Feb 2025 — pledge dropped'; gMark.appendChild(ml);
+    if (PLEDGE_ROW && PLEDGE_ROW.url) {
+      gMark.setAttribute('class', 'am-mk-link');
+      gMark.setAttribute('tabindex', '0');
+      gMark.setAttribute('role', 'link');
+      gMark.setAttribute('aria-label', PLEDGE_ROW.title + ' — ' + PLEDGE_ROW.source + ', ' + PLEDGE_ROW.date);
+      var openPledge = function(){ window.open(PLEDGE_ROW.url, '_blank', 'noopener'); };
+      gMark.addEventListener('click', openPledge);
+      gMark.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPledge(); } });
+    }
 
     // tooltip
     var tip = fig.querySelector('.am-tip'), scroll = fig.querySelector('.am-scroll');
@@ -315,7 +332,7 @@
 
     function restripe(){
       var alt = false;
-      DATA.forEach(function(d){
+      ALL.forEach(function(d){
         if (d.row.classList.contains('am-hidden')) return;
         d.row.classList.toggle('am-alt', alt); alt = !alt;
       });

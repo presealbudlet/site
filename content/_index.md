@@ -3,103 +3,84 @@ title = "UTAW at DeepMind"
 
 # Prose copy for the page. The repeating collections live in their own files:
 #   data/precedents.toml  — the "wins" cards
-#   data/updates.toml     — the "What's New" carousel (placeholder for now)
 #   data/faqs.toml        — the FAQ entries
 [extra]
 hero_title = "DeepMind Employees are Unionising"
-hero_mission_label = "Honouring our original mission:"
+hero_mission_label = "To honour our original mission:"
 hero_mission_quote = "To build AI responsibly to benefit humanity."
-hero_reason = "Recognition depends on numbers — the more of us who join, the stronger we negotiate."
 hero_cta_label = "Join the Union"
-join_url = "https://utaw.tech/join"
 footer_tagline = "We are judged by what we stand for. **Your membership is critical.**"
 
-tldr_lead = "Our power is our community. Together we can make AI a force for good."
-tldr = """
-AI safety, unethical uses of technology (including military contracts), and the energy
-it all runs on — the future of Artificial Intelligence is in the balance.
-
-Full-time employees (FTEs) across Google DeepMind (GDM) UK believe in protecting and
-honouring its original mission of benefitting humanity.
-
-That's why we're Unionising and campaigning for legal union recognition — so we can have a
-real say in how AI is built and ensure it is used ethically.
+# Shown under the mission quote, set off by a cyan rule.
+hero_summary = """
+As the law struggles to keep up, the first line of oversight comes from workers. We have a
+responsibility to ensure our labour is not used to harm society.
 """
 
-whats_new_intro = "A round up of news from our campaign and the broader world of tech."
+# How to Join: kept short. Each point links to the full FAQ answer
+# (#faq-<id>, set by `id` in data/faqs.toml).
+join = """
+Join at [join.cwu.org](https://join.cwu.org/). Registration happens via the CWU portal, as
+UTAW is part of the CWU. It takes about five minutes.
 
-who_we_are = """
+- **Eligibility:** All UK-based employees can join UTAW. This specific recognition campaign targets Google DeepMind, but we all work together. [Details](#faq-who-can-join)
+- **Anonymous:** your details are never shared with your employer. [Details](#faq-anonymous)
+- **Cost:** £8.70 a month, and member discounts can more than cover it. You also get legal advice and rep support. [Details](#faq-cost)
+"""
+
+# "Who We Are": two columns, centred. Left: heading, `who_we_are_intro`, then
+# the call to action (a link to the join page). Right: `who_we_are`.
+who_we_are_intro = """
 We are FTEs from across all units, functions and levels in GDM UK. Google DeepMind was
-founded on ethical principles, committed to building Artificial Intelligence and
-cutting-edge technologies for the benefit of all humanity. We want to honour that
-original commitment.
+founded on ethical principles, committed to building AI for the benefit of all humanity.
+We want to honour that original commitment.
 
-Unfortunately, Google and other organisations are forging ahead with unethical uses of AI.
-From military contracts to border control, unsafe applications of new technologies to the
-mounting energy cost of the AI buildout, the risks are clear and present.
-
-Companies are making decisions on our behalf, without proper consultation. That's why
-we're Unionising. Through union-led negotiations, you can have a real say in how DeepMind
-progresses and how AI is used. Together, we can ensure a safer and more ethical future.
+We believe AI has the potential to benefit society. But technological progress doesn’t
+automatically translate into shared prosperity: Nobel laureates Acemoglu and Johnson
+[argue](https://shapingwork.mit.edu/power-and-progress/) that organised workers were critical
+in turning post-war progress into prosperity for all.
 
 Our priorities and demands are decided by employees like you through a democratic process.
-We are striving to make the development and application of AI a democratic and fair
-endeavour.
-
 We are getting support for legal and negotiation expertise from our union's national
-office, but everything else is done by GDMers for GDMers. We are investing a lot of
-personal time and energy into this effort because we care deeply about DeepMind's
-original mission.
-
-**We'd love you to join us!**
+office, but everything else is done by GDMers for GDMers.
 """
 
-story_intro = """
-On **May the 4th**, Google DeepMind workers voted to unionise, with Unite the Union and
-the United Tech & Allied Workers (UTAW) being our official representatives. That same
-day, GDM UTAW and Unite the Union members at Google DeepMind asked for voluntary
-recognition, which would make our union official. **Google declined the request**, but
-agreed to meet via the ACAS conciliation service. On July 1st 2026, we entered
-negotiations.
+who_we_are = """
+Today, society has little say over AI. A handful of private companies control almost all
+compute infrastructure, and they decide where and how AI is deployed. That gives them global
+influence beyond democratic accountability, and regulation is struggling to keep up.
+
+Google and other AI companies are signing more and more military and surveillance contracts,
+with little regard for international law and [human rights](https://web.archive.org/web/20251225203735/https://www.nytimes.com/2024/12/03/technology/google-israel-contract-project-nimbus.html).
+These contracts often place no limits on how the technology is used while leaving companies
+with little visibility into what customers do:
+[Nimbus](https://theintercept.com/2025/05/12/google-nimbus-israel-military-ai-human-rights/)
+and the
+[Department of War](https://www.theinformation.com/articles/google-signs-classified-ai-deal-pentagon-amid-employee-opposition)
+contracts are clear examples. This is happening as models grow more powerful and
+[safety incidents multiply](https://hai.stanford.edu/ai-index/2026-ai-index-report/responsible-ai).
+
+Meanwhile, AI’s energy demands are pulling companies away from their climate commitments:
+Google’s own
+[2026 Environmental Report](https://storage.googleapis.com/gweb-mobius-cdn/sustainability/uploads/1699a2e19277e478b38a659f00cb38398a836e8c.pdf)
+admits its “AI infrastructure buildout is currently accelerating faster than the grid is
+decarbonizing”.
+
+With a recognised union, we get a say in how our labour is used and act as a counterweight to
+corporate power, helping steer the technology we build onto a better path. In this, we follow
+generations of workers who stood up for [ethical uses of their work](#precedents). As union
+members, we are also consulted by regulators, Parliament and MPs, so we can shape how AI is
+governed at the very moment governments are writing the rules.
 """
 
-story_next = """
-If no agreement can be reached over voluntary recognition, we can apply for statutory
-recognition.
+who_we_are_cta = "We'd love you to join us!"
 
-This process ends with a recognition agreement and a collective bargaining agreement:
-formal documents setting out who is covered by collective bargaining, what issues can be
-negotiated, how bargaining meetings work, what company resources and facilities our
-elected reps are entitled to, and how disputes are resolved. These agreements are not set
-in stone and typically evolve by expanding through renegotiation.
-
-GDM union members want to include demands over **unethical military contracts**,
-**AI Safety / Principles**, and **AI's climate impact**.
-"""
-
-demands_intro = """
-Responsible development requires honestly confronting the risks that widespread,
-unregulated integration of AI into society poses, risks that intensify as we deploy
-increasingly autonomous, agentic systems with potential access to sensitive domains such
-as critical infrastructure, military systems, financial systems, and civilian data.
-
-To mitigate such risks and make sure our technology is used to benefit humanity, we
-demand:
-"""
-
-# Sits directly under demands_intro, above the three cards. `{join_url}` is
-# swapped for extra.join_url by the template.
-demands_note = """
-**We are still finalising our demands.** A survey will be sent to members shortly, and
-this page will be updated once the results are in.
-**[Join the union]({join_url}) to have your say.**
-"""
+# "The Story So Far" timeline lives in data/story.toml
+story_next_intro = "The recognition process will proceed as follows:"
 
 negotiate_intro = """
 The message from Google's leadership is that we can only negotiate pay, holiday and
-hours — the minimum scope guaranteed by law. **There is considerable historical
+hours — [the minimum scope guaranteed by law](#faq-scope). **There is considerable historical
 precedent for broader negotiations** from comparable unions:
 """
-
-faq_intro = "Questions we hear from colleagues, answered honestly."
 +++

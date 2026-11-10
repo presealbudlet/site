@@ -29,6 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ get_url(path='style.css') }}?v={{ get_hash(path='style.css', sha256=true) | truncate(length=12, end='') }}">
+  <noscript><style>dialog.demand-dialog{display:block;position:static;margin:1rem 0;border:0}.demand-more-btn,.demand-dialog-close{display:none}</style></noscript>
 </head>
 <body>
 
@@ -41,25 +42,18 @@
         {{ section.extra.hero_mission_label }}
         <span class="hero-quote">&ldquo;{{ section.extra.hero_mission_quote }}&rdquo;</span>
       </p>
+      <div class="hero-summary">{{ section.extra.hero_summary | markdown | safe }}</div>
       <div class="hero-actions">
-        <a href="{{ section.extra.join_url }}" class="btn-hero" rel="noopener noreferrer">{{ section.extra.hero_cta_label }} &rarr;</a>
+        <a href="{{ config.extra.join_url }}" class="btn-hero" rel="noopener noreferrer">{{ section.extra.hero_cta_label }} &rarr;</a>
+        <a href="#join" class="btn-hero btn-hero--outline">How to Join</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--tldr">
-    <div class="container">
-      <h2 class="section-title">TL;DR</h2>
-      <div class="section-content">
-        <p class="tldr-lead">{{ section.extra.tldr_lead | markdown(inline=true) | safe }}</p>
-        {{ section.extra.tldr | markdown | safe }}
-      </div>
+      {% set contact_class = "contact-line--hero" %}
+      {% include "partials/contact.html" %}
     </div>
   </section>
 
   {% set articles = load_data(path="data/articles.toml") %}
   {% set total = articles.article | length %}
-  {% set archive_url = get_url(path="@/archive/_index.md") %}
   <section id="why" class="why">
     <div class="why-stage" data-carousel role="region" aria-roledescription="carousel"
          aria-label="Recent news about Google and AI">
@@ -91,9 +85,6 @@
         <div class="why-links">
           <a class="why-archive" href="https://g-applied-principles.pages.dev/" target="_blank" rel="noopener noreferrer">
             Google's unethical partnerships, documented <span class="why-archive-arrow" aria-hidden="true">&#8599;</span>
-          </a>
-          <a class="why-archive" href="{{ archive_url }}">
-            More of these in our archive <span class="why-archive-arrow" aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
@@ -141,28 +132,53 @@
     </div>
   </section>
 
-  <section id="who-we-are" class="section section--dark">
-    <div class="container">
-      <h2 class="section-title">Who We Are</h2>
-      <div class="section-content">{{ section.extra.who_we_are | markdown | safe }}</div>
+  {# Two columns, centred: heading, intro and call to action on the left; a
+     thin divider; the rest of the text on the right, centred vertically. #}
+  <section id="who-we-are" class="section section--tint">
+    <div class="who">
+      <div class="who-aside section-content">
+        <h2 class="section-title">Who We Are</h2>
+        {{ section.extra.who_we_are_intro | markdown | safe }}
+        <a class="who-cta" href="{{ config.extra.join_url }}" rel="noopener noreferrer">{{ section.extra.who_we_are_cta }} <span class="who-cta-arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="who-sep" aria-hidden="true"></div>
+      <div class="who-body section-content">{{ section.extra.who_we_are | markdown | safe }}</div>
     </div>
   </section>
 
   <section id="demands" class="section">
     <div class="container">
       <h2 class="section-title">Our Demands</h2>
-      <div class="section-intro section-intro--left">{{ section.extra.demands_intro | markdown | safe }}</div>
-      <div class="demands-note">{{ section.extra.demands_note | replace(from="{join_url}", to=section.extra.join_url) | markdown | safe }}</div>
+      <p class="contact-line demands-agreed">Our demands are agreed democratically by members. <a href="#faq-demands-agreed">How demands are agreed</a></p>
+      {% set contact_class = "contact-line--demands" %}
+      {% include "partials/contact.html" %}
     </div>
 
     {% set demands = load_data(path="data/demands.toml") %}
     <div class="demands-grid">
       {% for d in demands.demand %}
-      <div class="demand-pillar">
-        <p class="demand-pillar-num">Demand {{ loop.index }}</p>
+      <article class="demand-pillar">
         <h3 class="demand-pillar-title">{{ d.label }}</h3>
-        <div class="demand-pillar-text">{{ d.text | markdown | safe }}</div>
-      </div>
+        <div class="demand-pillar-summary">{{ d.summary | replace(from="{contact_email}", to=config.extra.contact_email) | markdown | safe }}</div>
+        {% if d.points %}
+        <ul class="demand-tags">
+          {% for p in d.points %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if d.details %}
+        <button type="button" class="demand-more-btn" data-demand-open="demand-{{ loop.index }}">
+          Read the full demand <span aria-hidden="true">&rarr;</span>
+        </button>
+
+        <dialog class="demand-dialog" id="demand-{{ loop.index }}" aria-labelledby="demand-{{ loop.index }}-title">
+          <div class="demand-dialog-inner">
+            <button type="button" class="demand-dialog-close" data-demand-close aria-label="Close">&times;</button>
+            <h3 class="demand-pillar-title" id="demand-{{ loop.index }}-title">{{ d.label }}</h3>
+            <div class="demand-pillar-text">{{ d.details | replace(from="{contact_email}", to=config.extra.contact_email) | markdown | safe }}</div>
+          </div>
+        </dialog>
+        {% endif %}
+      </article>
       {% endfor %}
     </div>
 
@@ -174,7 +190,7 @@
     </div>
 
     {% set precedents = load_data(path="data/precedents.toml") %}
-    <div class="precedent-grid">
+    <div class="precedent-grid" id="precedents">
       {% for item in precedents.precedent %}
       <div class="precedent-card" tabindex="0" aria-label="{{ item.headline }}. {{ item.text }}">
         <span class="precedent-card-inner">
@@ -203,30 +219,72 @@
     </div>
   </section>
 
+  {% set story = load_data(path="data/story.toml") %}
+  {# Two columns: what has happened on the left, what comes next on the
+     right. #}
   <section id="story-so-far" class="section section--dark">
-    <div class="container">
-      <h2 class="section-title">The Story So Far</h2>
-      <div class="section-content">
-        {{ section.extra.story_intro | markdown | safe }}
-        <h3 class="section-subtitle">What Next?</h3>
-        {{ section.extra.story_next | markdown | safe }}
+    <div class="story-cols">
+      <div class="story-col section-content">
+        <h2 class="section-title">The Story So Far</h2>
+        <ol class="timeline">
+          {% for e in story.event %}
+          <li class="timeline-item{% if e.now %} is-now{% endif %}">
+            {% if e.date %}<p class="timeline-date">{{ e.date }}</p>{% endif %}
+            <h3 class="timeline-title">{{ e.title }}</h3>
+            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      <div class="story-sep" aria-hidden="true"></div>
+      <div class="story-col story-col--next section-content">
+        <h3 class="section-title">What Next?</h3>
+        <p class="story-next-intro">{{ section.extra.story_next_intro }}</p>
+        <ol class="timeline timeline--next">
+          {% for e in story.next %}
+          <li class="timeline-item">
+            <p class="timeline-date">Step {{ loop.index }}</p>
+            <h4 class="timeline-title">{{ e.title }}</h4>
+            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
+          </li>
+          {% endfor %}
+        </ol>
       </div>
     </div>
   </section>
 
-  <section id="faq" class="section">
+  <section id="join" class="section section--tint">
     <div class="container">
-      <h2 class="section-title">FAQ</h2>
-      <p class="section-intro">{{ section.extra.faq_intro }}</p>
+      <h2 class="section-title">How to Join</h2>
       <div class="section-content">
-        {% set faqs = load_data(path="data/faqs.toml") %}
-        {% for item in faqs.faq %}
-        <details class="faq-item">
-          <summary>{{ item.question }}</summary>
-          <div class="faq-body">{{ item.answer | markdown | safe }}</div>
-        </details>
-        {% endfor %}
+        {{ section.extra.join | markdown | safe }}
+        <p class="join-cta"><a href="{{ config.extra.join_url }}" class="btn-cta" rel="noopener noreferrer">{{ section.extra.hero_cta_label }} &rarr;</a></p>
       </div>
+    </div>
+  </section>
+
+  {% set faqs = load_data(path="data/faqs.toml") %}
+  {# Two columns of topic groups: the first half of faqs.topics on the left,
+     the rest on the right. Each column grows on its own as answers open. #}
+  {% set faq_split = (faqs.topics | length + 1) / 2 | round(method="floor") %}
+  <section id="faq" class="section">
+    <div class="faq-cols">
+      <h2 class="section-title">FAQ</h2>
+      {% for col in [0, 1] %}
+      <div class="faq-col section-content">
+        {% for t in faqs.topics %}{% if (col == 0 and loop.index <= faq_split) or (col == 1 and loop.index > faq_split) %}
+        <div class="faq-group" id="faq-{{ t | slugify }}">
+          <h3 class="section-subtitle">{{ t }}</h3>
+          {% for item in faqs.faq %}{% if item.topic == t %}
+          <details class="faq-item"{% if item.id %} id="faq-{{ item.id }}"{% endif %}>
+            <summary>{{ item.question }}</summary>
+            <div class="faq-body">{{ item.answer | markdown | safe }}</div>
+          </details>
+          {% endif %}{% endfor %}
+        </div>
+        {% endif %}{% endfor %}
+      </div>
+      {% endfor %}
     </div>
   </section>
 
@@ -234,5 +292,7 @@
   {% include "partials/footer.html" %}
 
   <script src="{{ get_url(path='carousel.js') }}" defer></script>
+  <script src="{{ get_url(path='demands.js') }}" defer></script>
+  <script src="{{ get_url(path='faq.js') }}" defer></script>
 </body>
 </html>

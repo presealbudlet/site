@@ -1,8 +1,18 @@
 # FAQ entries shown in the FAQ section.
 # Add one by copying a [[faq]] block. Answers support Markdown.
+# Each entry's `topic` must be one of `topics`, which also sets the order the
+# groups appear in. The first half of the topics fill the left column, the
+# rest the right column.
+# An optional `id` gives the question a stable link, #faq-<id> (How to Join,
+# the timeline and Our Demands link to these); following such a link opens
+# the answer.
+
+topics = ["Joining", "Recognition", "Bargaining & demands", "General"]
 
 [[faq]]
 question = "Can I stay anonymous?"
+topic = "Joining"
+id = "anonymous"
 answer = """
 Yes.
 
@@ -24,32 +34,44 @@ Reg. 3.
 
 [[faq]]
 question = "Who can join?"
+topic = "Joining"
+id = "who-can-join"
 answer = """
-Membership is open to UK-based employees of Google DeepMind. Unfortunately
-contractors and colleagues based outside the UK (for example in the US) aren't
-eligible for this recognition campaign — but US colleagues can organise with our
-sister union, the [Alphabet Workers Union (AWU)](https://www.alphabetworkersunion.org/).
+Membership is open to UK-based employees of Google DeepMind. Google employees, outside of Google DeepMind,
+can still join UTAW, but this specific recognition targets Google DeepMind. We encourage you to join anyway, we
+all work together!
+
+Unfortunately, contractors and colleagues based outside the UK (for example in the US) aren't
+eligible for this recognition campaign.
+There are other options:
+- Join the [Coalition of Concerned AI Staff](https://concernedaistaff.org/), an international, inter-lab effort sharing growing concerns about how AI is being developed and used in the real world, with focus on military and surveillance applications.
+- Join an international coalition of Google DeepMind employees: [AIOC](https://www.aioc.sbs/interest)
+- Join [No Tech for Apartheid](https://www.notechforapartheid.com/), a worker-led labour organisation of Google workers organising to hold Google accountable for creating positive impact in the world and challenging complicity in militarism and surveillance.
+- US colleagues can organise with our sister union, the [Alphabet Workers Union (AWU)](https://www.alphabetworkersunion.org/).
 """
 
 [[faq]]
 question = "How much does it cost, and what do I get?"
+topic = "Joining"
+id = "cost"
 answer = """
-Membership is **£8.70 a month**. This covers the cost of running the union —
-trained organisers, legal advice, and support when you need it.
+Membership is **£8.70 a month**, much lower than many unions (Alphabet Workers Union
+members, for example, pay 1% of total compensation). This covers the cost of running the
+union — trained organisers, legal advice, and support when you need it.
 
 In return you get:
 
-- A **vote** in shaping the union's demands — the agenda is set democratically by members, not a handful of reps.
-- Access to our **free legal helpline and advice from day one**.
-- **Individual representation** in disciplinary and grievance hearings (for issues arising after your first eight weeks of membership).
-- A range of everyday **member discounts** — shopping, travel, insurance, gym memberships and more.
+- Access to our **free legal helpline and advice from day one**, and **training** on your rights.
+- **Individual representation** in disciplinary and grievance hearings (for issues arising after your first eight weeks of membership), so it's worth joining before you need it.
+- Everyday **member discounts** that alone can more than cover the cost: discounted supermarket vouchers, free cinema tickets, cheaper gym memberships, and savings on holidays, travel, insurance and more.
 
-The strongest reason, though, is collective: every member makes our case for
-recognition stronger and the union harder to ignore.
+We follow a one-member, one-vote principle. By joining, you can help shape our demands.
+You can also be involved in our talks with policymakers and help give form to AI regulation.
 """
 
 [[faq]]
 question = "What legal protection are we entitled to?"
+topic = "Joining"
 answer = """
 - **Protection from dismissal for union activity** — Section 152 TULRCA 1992
 - **Protection from detriment** (demotion, pay cut, harassment) for union activity — Section 146 TULRCA 1992
@@ -65,40 +87,148 @@ answer = """
 
 [[faq]]
 question = "Why doesn't Google want us to form a union?"
+topic = "General"
 answer = """
 Together we can formally act as an employee-side counterweight to management's ability to exercise
 unchecked authority. Management's self-interest is to prevent us from having this kind of power.
 """
 
 [[faq]]
-question = "What does statutory recognition mean for union members?"
+question = "What is union recognition?"
+topic = "Recognition"
 answer = """
-Statutory recognition gives GDM employees a legal framework to force negotiations on topics we care
-about if Google refuses to recognise us voluntarily. By securing recognition, we gain formal rights
-to collective bargaining, disclosure of internal company information, and mandatory negotiation and
-consultation on major workplace changes.
+Recognition is what gives your union the legal right to negotiate with the employer on workers'
+behalf. Without recognition, the employer can simply ignore the union. With recognition they are
+legally obliged to engage. **By securing union recognition workers gain formal rights to collective
+bargaining, disclosure of internal company information, and mandatory consultation on major
+workplace changes.**
 
-For statutory recognition there is a minimum membership threshold (10% of the bargaining unit, which
-we have passed) and all employees in the unit are called to vote. Even if you are not a union member,
-you can still vote — your vote will be fully anonymous. A majority vote in favour is sufficient;
-there is no minimum turnout threshold.
+When a union applies for recognition it defines the **bargaining unit**, which is the group of
+workers that it seeks to represent. For example, it can be all of Google DeepMind, or a smaller
+unit. Recognition can happen in two ways: **voluntary**, or **statutory**.
+
+The recognition process ends with a [**recognition agreement**](#faq-recognition-agreement).
 """
 
 [[faq]]
-question = "How can we extend the collective agreement beyond pay / hours / holidays?"
+question = "What is voluntary recognition?"
+topic = "Recognition"
+id = "voluntary"
 answer = """
-There is no restriction on topics we can discuss in collective bargaining — including business
-practices, company priorities and governance. Pay, hours and holidays is the minimum legal scope,
-but this isn't the focus of our campaign.
+The employer simply agrees to work with the union in the scope defined by the
+[recognition agreement](#faq-recognition-agreement). For voluntary recognition to happen, at least 10% of the bargaining unit must be
+members, and the majority of members should vote in favour of the recognition. The vote is
+internal to the union.
 
-To broaden the scope we need to pressure Google using our industrial leverage: unions can use
-actions short of a strike, campaigns, and ultimately strikes if the employer refuses.
-**The stronger the union, the more effective the pressure.** Most often, a credible threat is all
-it takes. Getting recognition is just the first step — then we work on extending the agreement.
+We asked for voluntary recognition on May the 4th, but Google refused. Negotiations via ACAS also
+failed, hence we are now applying for statutory recognition.
+"""
+
+[[faq]]
+question = "What is statutory recognition?"
+topic = "Recognition"
+id = "statutory"
+answer = """
+If an employer refuses to recognise a union, the union can apply to the Central Arbitration
+Committee (CAC). The CAC will verify if a minimum membership threshold is met (10% of the
+bargaining unit) and all employees in the unit are called to vote (ballot). A majority vote in
+favour is sufficient for the recognition to happen.
+
+Statutory recognition covers pay, hours and holidays by law; see
+[how we can extend it](#faq-scope) to other topics.
+"""
+
+[[faq]]
+question = "What is a recognition agreement?"
+topic = "Recognition"
+id = "recognition-agreement"
+answer = """
+A recognition agreement is a formal document which sets out who is covered by the union (the
+bargaining unit), what issues can be negotiated, how bargaining meetings work, what facilities and
+time off reps are entitled to, and how disputes are resolved if the two sides cannot agree.
+
+It sets the rules for bargaining; what is actually agreed goes into
+[collective bargaining agreements](#faq-collective-agreement).
+
+A recognition agreement is not set in stone. It can be expanded, updated, or renegotiated over
+time, and doing so is often one of the union's most important long-term goals.
+"""
+
+[[faq]]
+question = "What happens if recognition fails?"
+topic = "Recognition"
+answer = """
+The union will not be able to apply for statutory recognition in the same or similar bargaining
+unit for 3 years after a failed process. It can apply after one year in a different bargaining
+unit. Voluntary recognition can happen at any time.
+"""
+
+[[faq]]
+question = "What demands can be discussed at the bargaining table? How can we extend beyond pay / hours / holidays?"
+topic = "Bargaining & demands"
+id = "scope"
+answer = """
+Where a union gains recognition through the statutory process, it has the legal right to bargain collectively over pay, hours,
+and holiday entitlement. These are the minimum issues covered by the recognition agreement, but **there is no restriction on topics
+we can discuss** in collective bargaining — including business practices, company priorities and governance. 
+To do so, we need to **pressure Google to extend the [recognition agreement](#faq-recognition-agreement)**. Our industrial leverage includes actions short of a strike,
+campaigns, and ultimately strikes if the employer refuses. **The stronger the union, the more effective the pressure**.
+Most often, a credible threat is all it takes. Getting recognition is just the first step — then we work on extending the recognition agreement.
+"""
+
+[[faq]]
+question = "How are demands agreed upon?"
+topic = "Bargaining & demands"
+id = "demands-agreed"
+answer = """
+Demands are set through a democratic process: they come from the membership. This is what gives
+them legitimacy, both within the union and in the eyes of the employer.
+
+1. **Consultation:** members are asked about their priorities through meetings, surveys, or
+   conversations with reps. This is where the issues that matter most to workers are identified
+   and collected.
+2. **Drafting:** reps collate the feedback and draft a set of demands that reflects the
+   membership's priorities.
+3. **Approval:** members vote on or approve the demands before they are formally presented to the
+   employer.
+
+After approval, collective bargaining begins. This is where the demands are negotiated with the
+employer until a deal is reached.
+
+Collective bargaining is an ongoing process, not a one-off event. New demands can be raised, and
+existing ones amended, at any time through the same democratic process.
+"""
+
+[[faq]]
+question = "What is a collective bargaining agreement?"
+topic = "Bargaining & demands"
+id = "collective-agreement"
+answer = """
+A collective bargaining agreement (or collective agreement) is the deal reached between the union
+and the employer through bargaining.
+The [recognition agreement](#faq-recognition-agreement) defines the topics that can be negotiated.
+The union puts forward its demands, and the collective agreement is what is agreed upon after
+negotiation.
+
+Bargaining is ongoing, so collective agreements are renegotiated over time: each round can produce
+a new or updated one.
+"""
+
+[[faq]]
+question = "How does a bargaining process end?"
+topic = "Bargaining & demands"
+id = "bargaining-end"
+answer = """
+- **A deal is reached:** members need to vote to approve it, and it becomes a
+  [collective bargaining agreement](#faq-collective-agreement). They can also reject it and instruct
+  reps to return to the table.
+- **A deal is not reached:** members can be balloted on whether to escalate, including through
+  industrial action.
 """
 
 [[faq]]
 question = "I don't want to be affected by decisions made by union members — what can I do?"
+topic = "General"
 answer = """
 Decisions that affect you are already made by a much smaller pool of management executives,
 with no visibility or meaningful input from you: you were not consulted on the removal of the
@@ -111,15 +241,18 @@ all employees to better understand concerns. You will never be forced to engage 
 """
 
 [[faq]]
-question = "Have you tried going through the UK Googler Forums?"
+question = "Have you tried internal channels, for example the UK Googler Forums?"
+topic = "General"
 answer = """
 We have tried to open dialogue through the UK Googler Forums, but leadership declined to discuss
 ethical matters through this forum. Other routes — petitions with broad support, letters, questions
-at townhalls — have also been tried and ignored.
+at townhalls, even [protected disclosures](https://x.com/BlackHC/status/2117910329569202182?s=20) — have also been tried and ignored.
+
 """
 
 [[faq]]
 question = "What is \"union busting\"?"
+topic = "General"
 answer = """
 Let's ask Gemini!
 

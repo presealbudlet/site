@@ -12,6 +12,8 @@ generate_sitemap = false
 # Shared across templates (nav, footer). Kept here so there is a single source
 # of truth rather than repeating the value in each page's front matter.
 join_url = "https://join.cwu.org/"
+# "Commit to vote yes" pledge form, linked from the nav and from What Next?.
+vote_pledge_url = "https://grid.utaw.tech/nc/form/0affe0d8-0d1c-41be-a7b6-0e42ddd5ca56"
 # Contact address shown in the footer and in demand texts. In data/demands.toml
 # write {contact_email} where it should appear; it's swapped in at build time.
 contact_email = "alphabet@utaw.tech"

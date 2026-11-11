@@ -205,6 +205,25 @@ body {
 
 .nav-links .btn-join:hover { background: var(--blue-dark); }
 
+/* "Commit to vote yes" link stacked under the Join button */
+/* Shifted up so the button and the link below it sit inside the bar */
+.nav-join { position: relative; margin-top: -1rem; }
+
+/* Hangs below the button without widening the nav row */
+.nav-links a.nav-pledge {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.nav-links .nav-pledge::after { bottom: -2px; height: 1px; }
+.nav-links .nav-pledge:hover { color: var(--white); }
+
 /* ─── 6. Hero ───────────────────────────────────────────────────── */
 .hero {
   background: var(--blue);
@@ -1413,6 +1432,23 @@ html:has(dialog[open]) { overflow: hidden; }
   }
 }
 
+/* What Next?: "Commit to vote yes" button under the title */
+.story-cols .story-pledge { margin: -0.75rem 0 1.5rem; }
+
+.section--dark .section-content a.btn-pledge {
+  display: inline-block;
+  background: var(--cyan);
+  color: var(--navy);
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.section--dark .section-content a.btn-pledge:hover { background: var(--white); color: var(--navy); }
+
 /* What Next?: dashed line, hollow dots */
 .timeline--next { margin-top: 1.5rem; }
 
@@ -1692,6 +1728,19 @@ html:has(dialog[open]) { overflow: hidden; }
     border-radius: 3px;
     border-bottom: none;
   }
+
+  .nav-join { margin-top: 0; }
+
+  .nav-links a.nav-pledge {
+    position: static;
+    transform: none;
+    padding: 0.6rem 0 0;
+    font-size: 0.85rem;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .nav-links .nav-pledge::after { display: none; }
 
   .nav:has(.nav-toggle-check:checked) .nav-links { display: flex; }
 

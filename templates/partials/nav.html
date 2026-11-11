@@ -29,7 +29,10 @@
       <li><a href="{{ home_url }}#story-so-far">The Story So Far</a></li>
       <li><a href="{{ home_url }}#join">How to Join</a></li>
       <li><a href="{{ home_url }}#faq">FAQ</a></li>
-      <li><a href="{{ config.extra.join_url }}" class="btn-join" rel="noopener noreferrer">Join</a></li>
+      <li class="nav-join">
+        <a href="{{ config.extra.join_url }}" class="btn-join" rel="noopener noreferrer">Join</a>
+        <a href="{{ config.extra.vote_pledge_url }}" class="nav-pledge" target="_blank" rel="noopener noreferrer">Commit to vote yes</a>
+      </li>
     </ul>
   </nav>
 </header>

@@ -14,7 +14,7 @@ footer_tagline = "We are judged by what we stand for. **Your membership is criti
 # Shown under the mission quote, set off by a cyan rule.
 hero_summary = """
 As the law struggles to keep up, the first line of oversight comes from workers. We have a
-responsibility to ensure our labour is not used to harm society.
+responsibility to ensure our work is not used to harm society.
 """
 
 # How to Join: kept short. Each point links to the full FAQ answer
@@ -31,7 +31,7 @@ UTAW is part of the CWU. It takes about five minutes.
 # "Who We Are": two columns, centred. Left: heading, `who_we_are_intro`, then
 # the call to action (a link to the join page). Right: `who_we_are`.
 who_we_are_intro = """
-We are FTEs from across all units, functions and levels in GDM UK. Google DeepMind was
+We are FTEs from across all units, functions and levels in GDM UK. DeepMind was
 founded on ethical principles, committed to building AI for the benefit of all humanity.
 We want to honour that original commitment.
 
@@ -46,7 +46,7 @@ office, but everything else is done by GDMers for GDMers.
 """
 
 who_we_are = """
-Today, society has little say over AI. A handful of private companies control almost all
+Today, society has little say over AI. A handful of private companies control almost all of the
 compute infrastructure, and they decide where and how AI is deployed. That gives them global
 influence beyond democratic accountability, and regulation is struggling to keep up.
 
@@ -66,7 +66,7 @@ Google’s own
 admits its “AI infrastructure buildout is currently accelerating faster than the grid is
 decarbonizing”.
 
-With a recognised union, we get a say in how our labour is used and act as a counterweight to
+With a recognised union, we get a say in how our work is used and act as a counterweight to
 corporate power, helping steer the technology we build onto a better path. In this, we follow
 generations of workers who stood up for [ethical uses of their work](#precedents). As union
 members, we are also consulted by regulators, Parliament and MPs, so we can shape how AI is

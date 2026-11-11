@@ -234,7 +234,7 @@
           <li class="timeline-item{% if e.now %} is-now{% endif %}">
             {% if e.date %}<p class="timeline-date">{{ e.date }}</p>{% endif %}
             <h3 class="timeline-title">{{ e.title }}</h3>
-            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
+            <div class="timeline-text">{{ e.text | replace(from="{vote_pledge_url}", to=config.extra.vote_pledge_url) | markdown | safe }}</div>
           </li>
           {% endfor %}
         </ol>
@@ -249,7 +249,7 @@
           <li class="timeline-item">
             <p class="timeline-date">Step {{ loop.index }}</p>
             <h4 class="timeline-title">{{ e.title }}</h4>
-            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
+            <div class="timeline-text">{{ e.text | replace(from="{vote_pledge_url}", to=config.extra.vote_pledge_url) | markdown | safe }}</div>
           </li>
           {% endfor %}
         </ol>

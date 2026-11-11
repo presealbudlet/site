@@ -205,25 +205,6 @@ body {
 
 .nav-links .btn-join:hover { background: var(--blue-dark); }
 
-/* "Commit to vote yes" link stacked under the Join button */
-/* Shifted up so the button and the link below it sit inside the bar */
-.nav-join { position: relative; margin-top: -1rem; }
-
-/* Hangs below the button without widening the nav row */
-.nav-links a.nav-pledge {
-  position: absolute;
-  top: calc(100% + 0.25rem);
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--cyan);
-  white-space: nowrap;
-}
-
-.nav-links .nav-pledge::after { bottom: -2px; height: 1px; }
-.nav-links .nav-pledge:hover { color: var(--white); }
-
 /* ─── 6. Hero ───────────────────────────────────────────────────── */
 .hero {
   background: var(--blue);
@@ -301,10 +282,30 @@ body {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   margin-top: 2.25rem;
 }
+
+/* "Join the Union" with the "Commit to vote yes" link centred beneath it */
+.hero-join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-pledge {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: var(--cyan);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.hero-pledge:hover { color: var(--cyan); }
 
 .btn-hero {
   display: inline-block;
@@ -1728,19 +1729,6 @@ html:has(dialog[open]) { overflow: hidden; }
     border-radius: 3px;
     border-bottom: none;
   }
-
-  .nav-join { margin-top: 0; }
-
-  .nav-links a.nav-pledge {
-    position: static;
-    transform: none;
-    padding: 0.6rem 0 0;
-    font-size: 0.85rem;
-    text-align: center;
-    border-bottom: none;
-  }
-
-  .nav-links .nav-pledge::after { display: none; }
 
   .nav:has(.nav-toggle-check:checked) .nav-links { display: flex; }
 

@@ -69,8 +69,7 @@ decarbonizing”.
 With a recognised union, we get a say in how our work is used and act as a counterweight to
 corporate power, helping steer the technology we build onto a better path. In this, we follow
 generations of workers who stood up for [ethical uses of their work](#precedents). As union
-members, we are also consulted by regulators, Parliament and MPs, so we can shape how AI is
-governed at the very moment governments are writing the rules.
+members, we are also consulted by regulators, Parliament and MPs, so we can contribute with our expertise to help shape future policies.
 """
 
 who_we_are_cta = "We'd love you to join us!"

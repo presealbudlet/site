@@ -13,7 +13,7 @@ summary = "Google must publicly define and firmly uphold red lines around imperm
 points = [
 ]
 details = """
-- **1.1 No contracts with partners accused of human rights violations**, unless an independent third party assessment, publicly disclosed, verifies the technology will not be used to facilitate such violations.
+- **1.1 No contracts with partners accused of human rights violations**, unless an independent third-party assessment, publicly disclosed, verifies the technology will not be used to facilitate such violations.
 
   This responsibility follows from the [UN Guiding Principles on Business and Human Rights](https://digitallibrary.un.org/record/720245?ln=en&v=pdf), which Alphabet has long committed to in its own [statement on human rights](https://about.google/company-info/human-rights/). The [United Nations](https://www.un.org/unispal/document/a-hrc-59-23-from-economy-of-occupation-to-economy-of-genocide-report-special-rapporteur-francesca-albanese-palestine-2025/), [Amnesty International](https://www.accessnow.org/press-release/joint-statement-on-ai-in-warfare/), and [Alphabet shareholders](https://www.zevin.com/news-views/data-privacy-governance-alphabet) have all identified contracts upon which the UNGPs should compel Alphabet to act.
 
@@ -21,19 +21,20 @@ details = """
 
   > We will not pursue weapons, technologies or contracts whose principal purpose, implementation or impact causes harm or directly facilitates injury to people, or gather or use information for surveillance violating internationally accepted norms.
 
-- **1.3 AI principles in contracts terms.**
+- **1.3 AI principles in contract terms.**
  AI principles must be a non-negotiable part of any contract and apply equally whether we build the whole system or just supply an AI component in someone else's pipeline.
 
-- **1.4** AI principles must be durable, with a transparent, participatory process to change them.
+- **1.4 AI principles must be durable, with a transparent, participatory process to change them.**
 
 - **1.5 AI principles must be enforced and monitored, with independent oversight.**
 
-AI principles must be written in a way that makes them clear, specific, understandable, and enforceable. Google should then apply robust monitoring mechanisms that can detect almost any usage of our systems that violates the principles, and monitoring capabilities should be preserved in the deployment arrangements.
- 
-Independent oversight should complement internal monitoring and enforcement, so that a party other than Google can verify principles are upheld in practice. If any violation is found, Google should immediately apply effective enforcement measures that cause this misuse to cease.
+  AI principles must be written in a way that makes them clear, specific, understandable, and enforceable. Google should then apply robust monitoring mechanisms that can detect almost any usage of our systems that violates the principles, and monitoring capabilities should be preserved in the deployment arrangements.
 
-- **1.6** Google must create **accountability for violations**, with real consequences.
-Within the company, Google must lay out meaningful, proportionate consequences for workers who take actions that violate our AI principles. These consequences must apply to any Googler at any level, without exceptions.
+  Independent oversight should complement internal monitoring and enforcement, so that a party other than Google can verify principles are upheld in practice. If any violation is found, Google should immediately apply effective enforcement measures that cause this misuse to cease.
+
+- **1.6 Google must create accountability for violations, with real consequences.**
+
+  Within the company, Google must lay out meaningful, proportionate consequences for workers who take actions that violate our AI principles. These consequences must apply to any Googler at any level, without exceptions.
 """
 
 [[demand]]
@@ -42,14 +43,14 @@ summary = "Public trust and effective oversight of AI depend on transparency. Go
 points = [
 ]
 details = """
-- **2.1 Public published policy outlining client and deployment selection.**
+- **2.1 Publish policies on client and deployment selection.**
 Google must publish the policies we apply to determine whether we can ethically do business with a client, in accordance with our principles, and the policies we apply before, during, and after the time when we supply our technology to the client.
 
 - **2.2 Publicly report on business with governments, defence, law-enforcement and intelligence agencies.**
 
   On a regular basis, Google must issue public reports showing summary statistics like the number of these engagements and their overall value, broken down by the categories listed above and also by country. Relations routed through vendors or subcontractors should be included.
 
-  Reports should also provide information about human rights due diligence conducted, the permitted uses and deployment arrangement, monitoring capabilities and safeguards governing deployment. They should also specify any terms requiring Google to modify, disable, or remove safety measures at the customer's request.
+  Reports should also provide information about human rights due diligence conducted, the permitted uses and deployment arrangements, monitoring capabilities and safeguards governing deployment. They should also specify any terms requiring Google to modify, disable, or remove safety measures at the customer's request.
 
 - **2.3 Right to abstain.**
 
@@ -62,12 +63,12 @@ summary = """
 The defining challenge of our era is mitigating human impact on the climate, and AI's growth must not come
 at the planet's expense.
 
-Google must end its contract that accelerates fossil fuel extraction and make a serious commitment to reduce its impact
+Google must end its contracts that accelerate fossil fuel extraction and make a serious commitment to reduce its impact
 on the environment.
 
 """
 points = []
 details = """
 Demands related to the environment are still being detailed.
-If you want to contribute with your ideas, contact us at alphabet@utaw.tech.
+If you want to contribute your ideas, contact us at alphabet@utaw.tech.
 """

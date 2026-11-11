@@ -5,7 +5,7 @@ title = "UTAW at DeepMind"
 #   data/precedents.toml  — the "wins" cards
 #   data/faqs.toml        — the FAQ entries
 [extra]
-hero_title = "DeepMind Employees are Unionising"
+hero_title = "DeepMind Employees Are Unionising"
 hero_mission_label = "To honour our original mission:"
 hero_mission_quote = "To build AI responsibly to benefit humanity."
 hero_cta_label = "Join the Union"
@@ -23,7 +23,7 @@ join = """
 Join at [join.cwu.org](https://join.cwu.org/). Registration happens via the CWU portal, as
 UTAW is part of the CWU. It takes about five minutes.
 
-- **Eligibility:** All UK-based employees can join UTAW. This specific recognition campaign targets Google DeepMind FTE, but we all work together. [Details](#faq-who-can-join)
+- **Eligibility:** all UK-based employees can join UTAW. This specific recognition campaign targets Google DeepMind FTEs, but we all work together. [Details](#faq-who-can-join)
 - **Anonymous:** your details are never shared with your employer. [Details](#faq-anonymous)
 - **Cost:** £8.70 a month, and member discounts can more than cover it. You also get legal advice and rep support. [Details](#faq-cost)
 """
@@ -41,7 +41,7 @@ automatically translate into shared prosperity: Nobel laureates Acemoglu and Joh
 in turning post-war progress into prosperity for all.
 
 Our priorities and demands are decided by employees like you through a democratic process.
-We are getting support for legal and negotiation expertise from our union's national
+We are getting legal and negotiation support from our union's national
 office, but everything else is done by GDMers for GDMers.
 """
 

@@ -282,31 +282,10 @@ body {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   margin-top: 2.25rem;
 }
-
-/* "Join the Union" with the "Commit to vote yes" link beneath it, left-aligned
-   with the "For feedback and questions" line */
-.hero-join {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-
-.hero-pledge {
-  color: var(--white);
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: underline;
-  text-decoration-color: var(--cyan);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-.hero-pledge:hover { color: var(--cyan); }
 
 .btn-hero {
   display: inline-block;

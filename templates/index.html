@@ -44,10 +44,7 @@
       </p>
       <div class="hero-summary">{{ section.extra.hero_summary | markdown | safe }}</div>
       <div class="hero-actions">
-        <div class="hero-join">
-          <a href="{{ config.extra.join_url }}" class="btn-hero" rel="noopener noreferrer">{{ section.extra.hero_cta_label }} &rarr;</a>
-          <a href="{{ config.extra.vote_pledge_url }}" class="hero-pledge" target="_blank" rel="noopener noreferrer">Commit to vote yes in the recognition ballot &rarr;</a>
-        </div>
+        <a href="{{ config.extra.join_url }}" class="btn-hero" rel="noopener noreferrer">{{ section.extra.hero_cta_label }} &rarr;</a>
         <a href="#join" class="btn-hero btn-hero--outline">How to Join</a>
       </div>
       {% set contact_class = "contact-line--hero" %}

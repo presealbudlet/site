@@ -37,12 +37,12 @@ question = "Who can join?"
 topic = "Joining"
 id = "who-can-join"
 answer = """
-Membership is open to UK-based employees of Google DeepMind. Google employees, outside of Google DeepMind,
-can still join UTAW, but this specific recognition targets Google DeepMind. We encourage you to join anyway, we
-all work together!
+Membership is open to all UK employees of Google, including TVC. This specific recognition campaign, however,
+only convers Google DeepMind FTEs. We encourage people outside of Google DeepMind to join UTAW anyway: we
+all work together, and in the future we can try to get recognition in other bargaining units.
 
-Unfortunately, contractors and colleagues based outside the UK (for example in the US) aren't
-eligible for this recognition campaign.
+Unfortunately, colleagues based outside the UK (for example in the US) aren't
+eligible.
 There are other options:
 - Join the [Coalition of Concerned AI Staff](https://concernedaistaff.org/), an international, inter-lab effort sharing growing concerns about how AI is being developed and used in the real world, with focus on military and surveillance applications.
 - Join an international coalition of Google DeepMind employees: [AIOC](https://www.aioc.sbs/interest)
@@ -77,7 +77,7 @@ answer = """
 - **Protection from detriment** (demotion, pay cut, harassment) for union activity — Section 146 TULRCA 1992
 - **Protection from dismissal for taking part in lawful industrial action** (now automatically unfair, no qualifying period) — Section 238A TULRCA, as amended by Employment Rights Act 2025
 - **Protection from detriment for industrial action** (coming into force October 2026) — Employment Rights Act 2025, s.76 (which inserts s.236A into TULRCA 1992)
-- **Right to paid time off for union reps** to carry out duties — Section 168 TULRCA 1992
+- **Right to paid time off for union representatives** to carry out duties — Section 168 TULRCA 1992
 - **Right to unpaid time off for all members** to take part in union activities — Section 170 TULRCA 1992
 - **Individual representation** in disciplinary and grievance hearings — Employment Relations Act 1999, s.10
 - **Legal support through the union** if things go wrong — Union rulebook / membership agreement
@@ -98,7 +98,7 @@ question = "What is union recognition?"
 topic = "Recognition"
 answer = """
 Recognition is what gives your union the legal right to negotiate with the employer on workers'
-behalf. Without recognition, the employer can simply ignore the union. With recognition they are
+behalf. Without recognition, the employer can simply ignore your union. With recognition they are
 legally obliged to engage. **By securing union recognition workers gain formal rights to collective
 bargaining, disclosure of internal company information, and mandatory consultation on major
 workplace changes.**
@@ -121,7 +121,7 @@ members, and the majority of members should vote in favour of the recognition. T
 internal to the union.
 
 We asked for voluntary recognition on May the 4th, but Google refused. Negotiations via ACAS also
-failed, hence we are now applying for statutory recognition.
+failed, so we are now applying for statutory recognition.
 """
 
 [[faq]]
@@ -145,7 +145,7 @@ id = "recognition-agreement"
 answer = """
 A recognition agreement is a formal document which sets out who is covered by the union (the
 bargaining unit), what issues can be negotiated, how bargaining meetings work, what facilities and
-time off reps are entitled to, and how disputes are resolved if the two sides cannot agree.
+time off union representatives are entitled to, and how disputes are resolved if the two sides cannot agree.
 
 It sets the rules for bargaining; what is actually agreed goes into
 [collective bargaining agreements](#faq-collective-agreement).
@@ -185,9 +185,9 @@ Demands are set through a democratic process: they come from the membership. Thi
 them legitimacy, both within the union and in the eyes of the employer.
 
 1. **Consultation:** members are asked about their priorities through meetings, surveys, or
-   conversations with reps. This is where the issues that matter most to workers are identified
+   conversations with union representatives. This is where the issues that matter most to workers are identified
    and collected.
-2. **Drafting:** reps collate the feedback and draft a set of demands that reflects the
+2. **Drafting:** union representatives collate the feedback and draft a set of demands that reflects the
    membership's priorities.
 3. **Approval:** members vote on or approve the demands before they are formally presented to the
    employer.
@@ -221,7 +221,7 @@ id = "bargaining-end"
 answer = """
 - **A deal is reached:** members need to vote to approve it, and it becomes a
   [collective bargaining agreement](#faq-collective-agreement). They can also reject it and instruct
-  reps to return to the table.
+  union representatives to return to the table.
 - **A deal is not reached:** members can be balloted on whether to escalate, including through
   industrial action.
 """
@@ -235,7 +235,7 @@ with no visibility or meaningful input from you: you were not consulted on the r
 autonomous weapons or mass surveillance pledges from the AI Principles, nor on safety risks from
 contracts with significant human rights implications.
 
-Collective decision-making adds democracy, doesn't remove it. We will have a way to demand changes,
+Collective decision-making only improves democratic power, not reduce it. We will have a way to demand changes,
 and the company will have to consult us before making major decisions. Surveys can be run among
 all employees to better understand concerns. You will never be forced to engage or join a union.
 """

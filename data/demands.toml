@@ -42,7 +42,7 @@ summary = "Public trust and effective oversight of AI depend on transparency. Go
 points = [
 ]
 details = """
-- **2.1 Public published policy outlining client and deployment selection **
+- **2.1 Public published policy outlining client and deployment selection.**
 Google must publish the policies we apply to determine whether we can ethically do business with a client, in accordance with our principles, and the policies we apply before, during, and after the time when we supply our technology to the client.
 
 - **2.2 Publicly report on business with governments, defence, law-enforcement and intelligence agencies.**

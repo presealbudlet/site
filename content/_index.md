@@ -23,7 +23,7 @@ join = """
 Join at [join.cwu.org](https://join.cwu.org/). Registration happens via the CWU portal, as
 UTAW is part of the CWU. It takes about five minutes.
 
-- **Eligibility:** All UK-based employees can join UTAW. This specific recognition campaign targets Google DeepMind, but we all work together. [Details](#faq-who-can-join)
+- **Eligibility:** All UK-based employees can join UTAW. This specific recognition campaign targets Google DeepMind FTE, but we all work together. [Details](#faq-who-can-join)
 - **Anonymous:** your details are never shared with your employer. [Details](#faq-anonymous)
 - **Cost:** £8.70 a month, and member discounts can more than cover it. You also get legal advice and rep support. [Details](#faq-cost)
 """

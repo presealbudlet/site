@@ -287,11 +287,12 @@ body {
   margin-top: 2.25rem;
 }
 
-/* "Join the Union" with the "Commit to vote yes" link centred beneath it */
+/* "Join the Union" with the "Commit to vote yes" link beneath it, left-aligned
+   with the "For feedback and questions" line */
 .hero-join {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
 }
 

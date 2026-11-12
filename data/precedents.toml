@@ -1,5 +1,30 @@
 # Precedent cards shown in the "Can We Negotiate On This?" section.
 # Add a card by copying a [[precedent]] block. Images live in static/precedents/.
+#
+# Image credits:
+#   green-bans.jpg — Tribune (Australian newspaper), "Jack Mundey, Sydney,
+#                    December 1977", Wikimedia Commons, CC BY 4.0 (cropped).
+
+[[precedent]]
+headline = "Rolls-Royce employees grounded Pinochet's jets"
+text = "In 1974, more than 3,000 employees at the Rolls-Royce factory in Scotland refused to repair Chilean Air Force engines, helping ground Pinochet's air force for four years."
+image = "precedents/arms.jpg"
+focus = "center 40%"
+union = "AUEW · 1974"
+
+[[precedent]]
+headline = "Dockworkers refuse to ship arms to wars"
+text = "On 30 October 2026, more than 25 unions at 110+ ports in 22 countries struck against arms shipments to wars, including the war in Gaza. Genoa's dockers have refused arms cargo since 2019."
+image = "precedents/ports.jpg"
+focus = "center 78%"
+union = "Dockworkers' unions · 2026"
+
+[[precedent]]
+headline = "“Green bans”: builders protect the environment"
+text = "In the 1970s, Australian builders from the BLF union sided with local communities, insisting their labour should not be used for harmful purposes or to damage the environment."
+image = "precedents/green-bans.jpg"
+focus = "center 70%"
+union = "NSW BLF · 1971"
 
 [[precedent]]
 headline = "Pension fund dumps Israeli bonds over human rights"
@@ -9,32 +34,11 @@ focus = "center 70%"
 union = "UCU · 2024"
 
 [[precedent]]
-headline = "Phone lines to apartheid South Africa cut"
-text = "In 1977, the Union of Post Office Workers called on members to stop telephone and postal traffic to apartheid South Africa, using their grip on the network to squeeze the regime."
-image = "precedents/apartheid.jpg"
-focus = "center 60%"
-union = "UPW · 1977"
-
-[[precedent]]
 headline = "Actors vote 99.6% to refuse AI scans"
-text = "In December 2025, UK actors balloted 99.6% in favour of refusing AI body scans on set, piling pressure on producers to negotiate real protections."
+text = "In December 2025, UK actors voted 99.6% in favour of refusing AI body scans on set, piling pressure on producers to negotiate real protections."
 image = "precedents/ai-performers.jpg"
 focus = "center 62%"
 union = "Equity · 2025"
-
-[[precedent]]
-headline = "Rolls-Royce employees grounded Pinochet's jets"
-text = "In 1974, more than 3000 employees at the Rolls-Royce factory in Scotland refused to repair Chilean Air Force engines, helping ground Pinochet's air force for four years."
-image = "precedents/arms.jpg"
-focus = "center 40%"
-union = "AUEW · 1974"
-
-[[precedent]]
-headline = "47,000 dockworkers curb AI automation"
-text = "In 2024, the ILA shut down every port from Maine to Texas — 47,000 dockworkers walking out until shipping giants agreed to guard their jobs against automation through 2030."
-image = "precedents/ports.jpg"
-focus = "center 78%"
-union = "ILA · 2024"
 
 [[precedent]]
 headline = "No AI cloning without consent"

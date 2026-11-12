@@ -12,5 +12,7 @@
     </div>
     <p class="footer-tagline">{{ tagline | markdown(inline=true) | safe }}</p>
     <a href="{{ config.extra.join_url }}" class="btn-cta" rel="noopener noreferrer">Join UTAW</a>
+    {% set contact_class = "contact-line--footer" %}
+    {% include "partials/contact.html" %}
   </div>
 </footer>

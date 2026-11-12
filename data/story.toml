@@ -1,0 +1,67 @@
+# "The Story So Far" timeline.
+#
+# [[event]] — what has happened, oldest first. The last one should be where
+#             things stand today: give it `now = true` to highlight it.
+# [[next]]  — the steps still to come, shown under "What Next?" as a faded,
+#             dashed continuation of the timeline.
+#
+# `date` is the small label above each title (leave it as "" to hide it).
+# `text` supports Markdown, including links.
+
+[[event]]
+date = "Feb 2025"
+title = "Google drops its weapons pledge: we start to organise"
+text = """
+Google [changed its AI principles](https://www.theguardian.com/technology/2025/feb/05/google-owner-drops-promise-not-to-use-ai-for-weapons),
+removing its pledge against weapons and surveillance applications. That shift, and increasing military engagements, highlighted the need to have a say in how our technology is used.
+"""
+
+[[event]]
+date = "4 May 2026"
+title = "We ask Google to recognise our unions"
+text = """
+We had tried to open dialogue through the UK Googler Forums, petitions with broad support, letters and questions at town halls; each was deflected.
+Then the Pentagon deal was signed a day after hundreds of Google employees [asked the company not to sign it](https://assets.bwbx.io/documents/users/iqjWHBFdfxIU/riE1wPuvIT5M/v0).
+To give that dissent a formal voice, we [asked Google to recognise our unions](https://www.businessinsider.com/google-deepmind-employees-unionize-vote-ai-military-contract-uk-2026-5), UTAW and Unite, [voluntarily](#faq-voluntary). Google [declined](https://www.reuters.com/business/world-at-work/google-rejects-uk-union-recognition-offers-talks-via-conciliation-body-2026-05-20/)
+and offered talks through ACAS, the independent conciliation service.
+"""
+
+[[event]]
+date = "1 Jul 2026"
+title = "Talks begin through ACAS"
+text = """
+We entered negotiations.
+"""
+
+[[event]]
+date = "Now"
+title = "We apply for statutory recognition"
+now = true
+text = """
+We didn't reach an agreement, so we applied for [statutory recognition](#faq-statutory) through the Central Arbitration Committee (CAC).
+"""
+
+[[next]]
+title = "CAC accepts the application"
+text = """
+The CAC will check that the bargaining unit (BU, the employees we represent) is appropriate and that we have enough members (at least 10%). If so, it will accept the application.
+Our BU is Google DeepMind’s product area (PA).
+"""
+
+[[next]]
+title = "Ballot"
+text = """
+Everyone in the bargaining unit, members and non-members alike, is called to vote on whether they want our unions to be recognised. The ballot will likely happen via postal vote.
+"""
+
+[[next]]
+title = "Result"
+text = """
+If a majority of those who vote say yes, our unions are recognised. There is no minimum turnout.
+"""
+
+[[next]]
+title = "Bargaining"
+text = """
+By law, statutory recognition covers pay, hours and holidays. This is just the legal minimum. We will [seek to extend it](#faq-scope) to ethics and transparency through the [recognition agreement](#faq-recognition-agreement), then negotiate a [collective agreement](#faq-collective-agreement) on these issues.
+"""

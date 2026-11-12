@@ -1,6 +1,6 @@
 base_url = "https://www.gdmunion.co.uk"
 title = "UTAW at DeepMind"
-description = "FTEs across Google DeepMind UK are unionising for a real say over AI safety, unethical military contracts, and AI's climate impact. Join us."
+description = "Google DeepMind UK employees are unionising for enforceable red lines on AI, transparency over military and surveillance contracts, and a real environmental commitment. Join us."
 default_language = "en"
 minify_html = true
 generate_feeds = false
@@ -11,4 +11,12 @@ generate_sitemap = false
 [extra]
 # Shared across templates (nav, footer). Kept here so there is a single source
 # of truth rather than repeating the value in each page's front matter.
-join_url = "https://utaw.tech/join"
+join_url = "https://join.cwu.org/"
+# Contact address shown in the footer and in demand texts. In data/demands.toml
+# write {contact_email} where it should appear; it's swapped in at build time.
+contact_email = "alphabet@utaw.tech"
+
+[markdown]
+external_links_target_blank = true   # external links only
+external_links_no_follow = true      # external links only
+external_links_no_referrer = true    # external links only

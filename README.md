@@ -1,7 +1,6 @@
 # UTAW at DeepMind — gdmunion.co.uk
 
-A [Zola](https://www.getzola.org/) static site with two pages: the homepage (`/`)
-and the Archive (`/archive/`). Every push to `main` is built and deployed by
+A [Zola](https://www.getzola.org/) static site with a single page, the homepage (`/`). Every push to `main` is built and deployed by
 GitHub Actions (`.github/workflows/deploy.yml`) to `www.gdmunion.co.uk`. Zola
 writes the build to `public/`, which is gitignored.
 
@@ -14,22 +13,20 @@ not in the templates.**
 
 | What you want to change | Edit this |
 |---|---|
-| Hero title, mission quote, CTA label | `content/_index.md` → `hero_*` |
-| TL;DR text | `content/_index.md` → `tldr_lead`, `tldr` |
-| "Who We Are" text | `content/_index.md` → `who_we_are` |
-| Demands intro and status note | `content/_index.md` → `demands_intro`, `demands_note` (the `{join_url}` placeholder gets replaced) |
-| The three demand pillars | `data/demands.toml` (`[[demand]]`: `label`, `text`) |
+| Hero title, mission quote, summary, CTA label | `content/_index.md` → `hero_*` (`hero_summary` is the text under the quote) |
+| "How to Join" section | `content/_index.md` → `join` |
+| "Who We Are" text | `content/_index.md` → `who_we_are_intro` (left column), `who_we_are` (right column), `who_we_are_cta` (link to the join page, left) |
+| The demand cards | `data/demands.toml` (`[[demand]]`: `label`, `summary`, `points`, `details` — `details` is optional; without it the card has no "Read the full demand" button) |
 | "Can we negotiate…?" intro | `content/_index.md` → `negotiate_intro` |
 | Precedent flip-cards ("wins") | `data/precedents.toml` (`headline`, `text`, `image`, `focus`, `union`); images go in `static/precedents/` |
-| "Story So Far" / "What Next?" | `content/_index.md` → `story_intro`, `story_next` |
-| FAQ | `content/_index.md` → `faq_intro`; entries in `data/faqs.toml` (`question`, `answer`) |
+| "Story So Far" timeline / "What Next?" steps | `data/story.toml` (`[[event]]`: `date`, `title`, `text`, `now`; `[[next]]`: `title`, `text`); the "What Next?" intro line is `content/_index.md` → `story_next_intro` |
+| FAQ | `data/faqs.toml` (`question`, `topic`, `answer`, optional `id` for links); the topic groups and their order are `topics` at the top of that file |
 | "Why We're Doing This" carousel slides | `data/articles.toml` (`title`, `summary`, `url`, `source`, `date`, `image`, `focus`); images go in `static/articles/`. The order is a deliberate story, not chronological. |
 | Carousel heading and intro paragraph | Hardcoded in `templates/index.html` (the `.why-static` block) |
-| Archive page intro | `content/archive/_index.md` → `intro` |
-| Archive table rows | `data/archive.toml` (`date`, `title`, `url`, `source`, `summary`, `theme`, `sev`), kept **newest first** |
 | Footer tagline | `content/_index.md` → `footer_tagline`; the default is in `templates/partials/footer.html` |
 | Nav links | `templates/partials/nav.html` |
-| Join URL | `config.toml` → `extra.join_url` (used by the nav and footer) **and** `content/_index.md` → `join_url` (used by the hero and demands note). Update both. |
+| Join URL | `config.toml` → `extra.join_url` (used by the nav, hero and footer) |
+| Contact email | `config.toml` → `extra.contact_email` (shown in the footer; write `{contact_email}` in `data/demands.toml` to insert it) |
 | Site title, description, base URL | `config.toml` |
 
 Markdown works in the multi-line `"""` fields and in FAQ answers and demand text.
@@ -37,29 +34,23 @@ Markdown works in the multi-line `"""` fields and in FAQ answers and demand text
 ## Templates (layout and markup)
 
 - **`templates/index.html`**: the homepage. Its sections, in order: hero →
-  TL;DR → `#why` carousel → `#who-we-are` → `#demands` (pillars and precedent
-  cards) → `#story-so-far` → `#faq` → footer. The `<head>` meta, OG and Twitter
-  tags are also here.
-- **`templates/archive.html`**: the Archive page. Besides markup, it contains:
-  - **inline `<style>`** for the timeline map (`.am-*` classes);
-  - **inline `<script>`** that draws the theme timeline from the table rows and
-    filters them. The theme names and colours are in the `THEMES` array there.
-    If you add a new `theme` value in `archive.toml`, add it to that array too.
-    The "Feb 2025 — pledge dropped" marker is also set in that script;
-  - placeholder lorem-ipsum summaries, shown for any row without a `summary`.
-- **`templates/partials/nav.html`** and **`footer.html`**: shared by both pages.
-  Set `nav_current = "archive"` before including the nav to highlight the
-  active link.
+  `#why` carousel → `#who-we-are` → `#demands` (demand cards and precedent
+  cards) → `#story-so-far` → `#join` → `#faq` → footer. The `<head>` meta, OG
+  and Twitter tags are also here.
+- **`templates/partials/nav.html`** and **`footer.html`**: the shared nav and
+  footer.
 - **`templates/404.html`**: a bare page that doesn't use the shared nav or styles.
 
 ## Styling and scripts
 
 - **`static/style.css`**: all global styles, in numbered sections:
-  1 variables/colours → 5 nav → 6 hero → 7–11 sections and typography →
-  demands → precedent cards → carousel → 12 FAQ → 13 footer →
-  14–15 accessibility and motion → 16 responsive → archive page and table.
+  1 variables/colours → 5 nav → 6 hero → 7–9 sections and typography →
+  10–11 demands and pop-up → 12 precedent cards → 13 carousel → 14 FAQ →
+  15 footer → 16–17 accessibility and motion → 18 responsive.
   Brand colours are custom properties in section 1. The stylesheet is
   cache-busted automatically by a hash in the `<link>` tag.
+- **`static/demands.js`**: opens each demand's full text in a `<dialog>`
+  pop-up. Without JS the full text is shown inline.
 - **`static/carousel.js`**: behaviour for the homepage carousel (7s autoplay,
   controls, swipe). It's a progressive enhancement, so the first slide still
   shows without JS.
@@ -77,9 +68,3 @@ Markdown works in the multi-line `"""` fields and in FAQ answers and demand text
 - `static/4efff1c7fd/`: redirect stubs from an old URL path to `/`.
 - `CNAME` (root, `gdmunion.co.uk`) and `static/CNAME` (`www.gdmunion.co.uk`)
   are for domain setup.
-
-## Not yet wired up
-
-- `data/updates.toml` and `whats_new_intro`: no template uses either, so the
-  "What's New" carousel isn't on the page yet.
-- `hero_reason` in `content/_index.md`: also not used by any template.

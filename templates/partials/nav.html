@@ -1,11 +1,8 @@
 {# Shared site navigation. Included by every page template.
 
    Anchor links are resolved against the main content section so they work
-   from sub-pages (e.g. the archive) as well as the home page. Set
-   `nav_current` before including to mark the active top-level page, e.g.
-   `{% set nav_current = "archive" %}`. #}
+   from any page. #}
 {% set home_url    = get_url(path="@/_index.md") %}
-{% set archive_url = get_url(path="@/archive/_index.md") %}
 
 <header class="site-header">
   <nav class="nav" aria-label="Main navigation">
@@ -30,8 +27,8 @@
       <li><a href="{{ home_url }}#who-we-are">Who We Are</a></li>
       <li><a href="{{ home_url }}#demands">Our Demands</a></li>
       <li><a href="{{ home_url }}#story-so-far">The Story So Far</a></li>
+      <li><a href="{{ home_url }}#join">How to Join</a></li>
       <li><a href="{{ home_url }}#faq">FAQ</a></li>
-      <li><a href="{{ archive_url }}"{% if nav_current is defined and nav_current == "archive" %} class="is-active" aria-current="page"{% endif %}>Archive</a></li>
       <li><a href="{{ config.extra.join_url }}" class="btn-join" rel="noopener noreferrer">Join</a></li>
     </ul>
   </nav>

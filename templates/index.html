@@ -266,7 +266,8 @@
   {% set faqs = load_data(path="data/faqs.toml") %}
   {# Two columns of topic groups: the first half of faqs.topics on the left,
      the rest on the right. Each column grows on its own as answers open. #}
-  {% set faq_split = (faqs.topics | length + 1) / 2 | round(method="floor") %}
+  {% set faq_topic_count = faqs.topics | length %}
+  {% set faq_split = (faq_topic_count + 1) / 2 | round(method="floor") %}
   <section id="faq" class="section">
     <div class="faq-cols">
       <h2 class="section-title">FAQ</h2>

@@ -231,7 +231,7 @@
           <li class="timeline-item{% if e.now %} is-now{% endif %}">
             {% if e.date %}<p class="timeline-date">{{ e.date }}</p>{% endif %}
             <h3 class="timeline-title">{{ e.title }}</h3>
-            <div class="timeline-text">{{ e.text | replace(from="{vote_pledge_url}", to=config.extra.vote_pledge_url) | markdown | safe }}</div>
+            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
           </li>
           {% endfor %}
         </ol>
@@ -239,14 +239,13 @@
       <div class="story-sep" aria-hidden="true"></div>
       <div class="story-col story-col--next section-content">
         <h3 class="section-title">What Next?</h3>
-        <p class="story-pledge"><a href="{{ config.extra.vote_pledge_url }}" class="btn-pledge" target="_blank" rel="noopener noreferrer">Commit to vote yes &rarr;</a></p>
         <p class="story-next-intro">{{ section.extra.story_next_intro }}</p>
         <ol class="timeline timeline--next">
           {% for e in story.next %}
           <li class="timeline-item">
             <p class="timeline-date">Step {{ loop.index }}</p>
             <h4 class="timeline-title">{{ e.title }}</h4>
-            <div class="timeline-text">{{ e.text | replace(from="{vote_pledge_url}", to=config.extra.vote_pledge_url) | markdown | safe }}</div>
+            <div class="timeline-text">{{ e.text | markdown | safe }}</div>
           </li>
           {% endfor %}
         </ol>

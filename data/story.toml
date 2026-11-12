@@ -6,8 +6,7 @@
 #             dashed continuation of the timeline.
 #
 # `date` is the small label above each title (leave it as "" to hide it).
-# `text` supports Markdown, including links. Write {vote_pledge_url} for the
-# "Commit to vote yes" form (set in config.toml).
+# `text` supports Markdown, including links.
 
 [[event]]
 date = "Feb 2025"
@@ -52,7 +51,7 @@ Our BU is Google DeepMind’s product area (PA).
 [[next]]
 title = "Ballot"
 text = """
-Everyone in the bargaining unit, members and non-members alike, is called to vote on whether they want our unions to be recognised. The ballot will likely happen via postal vote. [Commit to vote yes]({vote_pledge_url}) in the recognition ballot.
+Everyone in the bargaining unit, members and non-members alike, is called to vote on whether they want our unions to be recognised. The ballot will likely happen via postal vote.
 """
 
 [[next]]

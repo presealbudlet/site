@@ -159,7 +159,7 @@
       {% for d in demands.demand %}
       <article class="demand-pillar">
         <h3 class="demand-pillar-title">{{ d.label }}</h3>
-        <div class="demand-pillar-summary">{{ d.summary | replace(from="{contact_email}", to=config.extra.contact_email) | markdown | safe }}</div>
+        <div class="demand-pillar-summary">{{ d.summary | replace(from="{contact_email}", to=config.extra.contact_email) | replace(from="{chat_url}", to=config.extra.chat_url) | markdown | safe }}</div>
         {% if d.points %}
         <ul class="demand-tags">
           {% for p in d.points %}<li>{{ p }}</li>{% endfor %}
@@ -174,7 +174,7 @@
           <div class="demand-dialog-inner">
             <button type="button" class="demand-dialog-close" data-demand-close aria-label="Close">&times;</button>
             <h3 class="demand-pillar-title" id="demand-{{ loop.index }}-title">{{ d.label }}</h3>
-            <div class="demand-pillar-text">{{ d.details | replace(from="{contact_email}", to=config.extra.contact_email) | markdown | safe }}</div>
+            <div class="demand-pillar-text">{{ d.details | replace(from="{contact_email}", to=config.extra.contact_email) | replace(from="{chat_url}", to=config.extra.chat_url) | markdown | safe }}</div>
           </div>
         </dialog>
         {% endif %}

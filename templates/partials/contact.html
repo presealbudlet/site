@@ -1,4 +1,5 @@
 {# "For feedback and questions" line, used in the hero, under the demand
-   cards and in the footer. The address is config.toml → extra.contact_email.
+   cards and in the footer. The address is config.toml → extra.contact_email;
+   the "request a chat" form is extra.chat_url.
    Set `contact_class` before including to add a placement modifier. #}
-<p class="contact-line{% if contact_class %} {{ contact_class }}{% endif %}">For feedback and questions, reach out to <a href="mailto:{{ config.extra.contact_email }}">{{ config.extra.contact_email }}</a></p>
+<p class="contact-line{% if contact_class %} {{ contact_class }}{% endif %}">For feedback and questions, reach out to <a href="mailto:{{ config.extra.contact_email }}">{{ config.extra.contact_email }}</a> or <a href="{{ config.extra.chat_url }}" target="_blank" rel="noopener">request a chat with a colleague</a></p>

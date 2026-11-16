@@ -70,5 +70,5 @@ on the environment.
 points = []
 details = """
 Demands related to the environment are still being detailed.
-If you want to contribute your ideas, contact us at alphabet@utaw.tech.
+If you want to contribute your ideas, contact us at {contact_email} or [request a chat with a colleague]({chat_url}).
 """

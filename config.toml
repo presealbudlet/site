@@ -15,6 +15,9 @@ join_url = "https://join.cwu.org/"
 # Contact address shown in the footer and in demand texts. In data/demands.toml
 # write {contact_email} where it should appear; it's swapped in at build time.
 contact_email = "alphabet@utaw.tech"
+# "Request a chat" form, linked next to the contact email. In data/demands.toml
+# write {chat_url} where it should appear.
+chat_url = "https://grid.utaw.tech/nc/form/731b5219-2ff7-405b-b914-01d903ea4113"
 
 [markdown]
 external_links_target_blank = true   # external links only

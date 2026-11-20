@@ -1,0 +1,13 @@
+# ai.txt — machine-readable opt-out for AI and text/data-mining use.
+# This site is the public campaign material of Google DeepMind workers
+# organising with UTAW / Unite the Union.
+
+User-Agent: *
+Disallow: /
+
+# No part of this site may be used for training, fine-tuning, evaluating or
+# grounding machine-learning models, or for any text and data mining, whether
+# commercial or non-commercial. This is an express reservation of rights under
+# Article 4(3) of EU Directive 2019/790 and the UK TDM exception.
+
+Contact: https://utaw.tech/

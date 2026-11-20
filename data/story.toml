@@ -34,11 +34,11 @@ We entered negotiations.
 """
 
 [[event]]
-date = "Now"
+date = "12 Nov 2026"
 title = "We apply for statutory recognition"
 now = true
 text = """
-We didn't reach an agreement, so we applied for [statutory recognition](#faq-statutory) through the Central Arbitration Committee (CAC).
+We didn't reach an agreement, so we [applied](https://www.wired.com/story/google-deepmind-staff-escalate-their-union-fight/) for [statutory recognition](#faq-statutory) through the Central Arbitration Committee (CAC).
 """
 
 [[next]]
